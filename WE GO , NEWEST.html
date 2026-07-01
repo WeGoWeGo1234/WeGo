@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>WE GO Courier Quote</title>
+<meta name="theme-color" content="#ff4f00">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WE GO">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+:root{--orange:#ff4f00;--orange2:#ff7a1a;--bg:#030303;--card:#080808;--muted:#aaa;--line:rgba(255,79,0,.72)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif}
+body{padding:env(safe-area-inset-top) 14px env(safe-area-inset-bottom);background:radial-gradient(circle at 10% 0%,rgba(255,79,0,.28),transparent 30%),radial-gradient(circle at 100% 18%,rgba(255,106,0,.12),transparent 30%),linear-gradient(180deg,#000,#050505 55%,#0a0a0a)}
+.app{max-width:490px;margin:0 auto;padding:20px 0 28px}.hero{text-align:center;padding:8px 0 12px}.mark{font-size:64px;color:var(--orange);font-weight:1000;line-height:.8;text-shadow:0 0 28px rgba(255,79,0,.45);transform:skewX(-12deg)}
+.kicker{margin-top:10px;font-size:11px;letter-spacing:.28em;font-weight:900;color:#ddd;text-transform:uppercase}.brand{font-size:62px;line-height:.85;margin:7px 0 0;font-style:italic;font-weight:1000;letter-spacing:-3px;text-transform:uppercase}.brand span{color:var(--orange)}
+.slogan{font-size:20px;font-style:italic;margin:10px 0 0;font-weight:800}.slogan b{color:var(--orange);font-size:24px}.loadBadge{margin:16px auto 5px;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,79,0,.12);border:1.7px solid var(--orange);border-radius:999px;color:#ff8a43;font-size:13px;font-weight:1000;letter-spacing:.07em;text-transform:uppercase;box-shadow:0 0 20px rgba(255,79,0,.25)}
+.subnote{color:#c8c8c8;font-size:12px;margin:7px 0 0;font-weight:700}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.chip{background:#090909;border:1.5px solid var(--line);color:#fff;border-radius:15px;padding:13px 8px;font-weight:950;font-size:15px}.chip.active{background:linear-gradient(90deg,var(--orange),#ff6a00);box-shadow:0 8px 25px rgba(255,79,0,.24)}
+.card{background:linear-gradient(180deg,rgba(12,12,12,.96),rgba(3,3,3,.96));border:1.5px solid var(--line);border-radius:22px;padding:18px;margin-top:14px;box-shadow:0 18px 42px rgba(0,0,0,.45)}
+label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#bdbdbd;margin-bottom:13px;font-weight:900}.inputWrap{display:flex;align-items:center;gap:10px;margin-top:8px;background:#fff;color:#111;border-radius:15px;padding:0 13px}.pin{font-size:22px}input{width:100%;border:0;outline:0;padding:15px 0;font-size:21px;background:transparent;color:#111}input::placeholder{color:#777}.primary{width:100%;border:0;border-radius:15px;background:linear-gradient(90deg,var(--orange),#ff6a00);color:#fff;font-size:26px;font-weight:1000;font-style:italic;padding:18px;margin-top:3px;box-shadow:0 10px 30px rgba(255,79,0,.25)}.primary:active,.chip:active,.actions button:active,.actions a:active{transform:scale(.985)}
+.note{text-align:center;color:#aaa;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:12px 0 0}.status{display:none;text-align:center;margin-top:12px;padding:12px;border-radius:13px;color:#ffba99;background:rgba(255,79,0,.12);border:1px solid rgba(255,79,0,.35);font-weight:700}.result{display:none}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.top small{color:var(--orange);font-weight:1000;letter-spacing:.16em;font-size:11px}.top h2{margin:2px 0 0;font-size:34px;font-style:italic;letter-spacing:-1px}.badge{background:var(--orange);color:#fff;border-radius:999px;padding:8px 12px;font-weight:950;font-size:13px}.line{display:flex;justify-content:space-between;gap:12px;margin:10px 0;font-size:16px}.line span{color:#bbb}.line strong{text-align:right}.capacity{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:11px 12px;margin:12px 0;color:#ddd;font-size:13px;line-height:1.35}.capacity b{color:#ff8a43}hr{border:0;border-top:1px solid var(--line);margin:15px 0}.total{display:flex;justify-content:space-between;align-items:end;border-top:1px dashed rgba(255,255,255,.35);padding-top:15px;margin-top:15px}.total span{color:var(--orange);font-size:21px;font-weight:1000;font-style:italic}.total strong{color:var(--orange);font-size:44px;letter-spacing:-1px}.actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:17px}.actions button,.actions a{text-align:center;text-decoration:none;border-radius:13px;padding:13px 5px;font-size:15px;font-weight:950;color:#fff}.actions button{background:#070707;border:1px solid var(--orange)}.actions a{background:var(--orange);border:1px solid var(--orange)}footer{text-align:center;color:#fff;margin:20px 0 8px;font-weight:850;line-height:1.6}footer small{display:block;color:#aaa;margin-top:7px}.fine{color:#888;font-size:11px;text-align:center;margin-top:10px;line-height:1.4}
+</style>
+</head>
+<body>
+<main class="app">
+<section class="hero">
+<div class="mark">➤</div>
+<div class="kicker">Dedicated Same-Day Courier</div>
+<div class="brand">WE <span>GO</span></div>
+<p class="slogan">When it can’t wait... <b>WE GO.</b></p>
+<div class="loadBadge">🚚 Small & Medium Critical Loads</div>
+<div class="subnote">Built for parts, documents, supplies, and urgent freight — not full truckloads.</div>
+</section>
+<section class="grid">
+<button class="chip active" onclick="setType(this,'Parts')">⚙ Parts</button>
+<button class="chip" onclick="setType(this,'Industrial')">🏭 Industrial</button>
+<button class="chip" onclick="setType(this,'Legal')">⚖ Legal</button>
+<button class="chip" onclick="setType(this,'Supplies')">📦 Supplies</button>
+</section>
+<section class="card">
+<label>Pickup City<div class="inputWrap"><span class="pin">📍</span><input id="pickup" placeholder="Tupelo, MS"></div></label>
+<label>Destination City<div class="inputWrap"><span class="pin">📍</span><input id="dropoff" placeholder="Memphis, TN"></div></label>
+<button class="primary" onclick="calculate()">GET QUOTE ›</button>
+<p class="note">Flat rate: $50 + $2.00 per loaded mile</p>
+<div id="status" class="status"></div>
+</section>
+<section id="result" class="card result">
+<div class="top"><div><small>FLAT RATE QUOTE</small><h2>WE GO</h2></div><div id="rType" class="badge">Parts</div></div>
+<div class="capacity"><b>Capacity note:</b> quote is intended for small & medium critical loads that fit car/SUV/pickup-style transport.</div>
+<div class="line"><span>Pickup</span><strong id="rPickup"></strong></div>
+<div class="line"><span>Destination</span><strong id="rDropoff"></strong></div>
+<div class="line"><span>Loaded Miles</span><strong id="rMiles"></strong></div>
+<hr>
+<div class="line"><span>Service Fee</span><strong id="rFee"></strong></div>
+<div class="line"><span id="rMileageLabel">Mileage</span><strong id="rMileage"></strong></div>
+<div class="total"><span>TOTAL QUOTE</span><strong id="rTotal"></strong></div>
+<div class="actions"><button onclick="copyQuote()">Copy</button><button onclick="shareQuote()">Share</button><a href="tel:6625547497">Call</a></div>
+<p class="fine">Final availability may depend on item size, weight, pickup time, and delivery requirements.</p>
+</section>
+<footer><div>☎ 662-554-7497</div><div>✉ chance_stanley@aol.com</div><small>Independent Critical Same-Day Courier</small></footer>
+</main>
+<script>
+const serviceFee=50, ratePerMile=2.0; let selectedType="Parts", lastQuote="";
+function setType(btn,type){selectedType=type;document.querySelectorAll(".chip").forEach(b=>b.classList.remove("active"));btn.classList.add("active");}
+function money(n){return "$"+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}
+async function geocode(place){const q=place.includes(",")?place:place+", MS"; const url="https://nominatim.openstreetmap.org/search?format=json&countrycodes=us&limit=1&q="+encodeURIComponent(q); const res=await fetch(url); const data=await res.json(); if(!data.length)throw new Error("Could not find "+place+". Try City, ST."); return {lat:data[0].lat,lon:data[0].lon};}
+async function calculate(){const pickup=document.getElementById("pickup").value.trim(); const dropoff=document.getElementById("dropoff").value.trim(); const status=document.getElementById("status"); const result=document.getElementById("result"); result.style.display="none"; status.style.display="none"; if(!pickup||!dropoff){status.textContent="Enter both pickup and destination.";status.style.display="block";return;} status.textContent="Calculating route..."; status.style.display="block"; try{const a=await geocode(pickup); const b=await geocode(dropoff); const routeUrl="https://router.project-osrm.org/route/v1/driving/"+a.lon+","+a.lat+";"+b.lon+","+b.lat+"?overview=false"; const rr=await fetch(routeUrl); const route=await rr.json(); if(!route.routes||!route.routes.length)throw new Error("No driving route found."); const miles=route.routes[0].distance/1609.344; const mileageCost=miles*ratePerMile; const total=Math.round(serviceFee+mileageCost); document.getElementById("rType").textContent=selectedType; document.getElementById("rPickup").textContent=pickup; document.getElementById("rDropoff").textContent=dropoff; document.getElementById("rMiles").textContent=miles.toFixed(1)+" mi"; document.getElementById("rFee").textContent=money(serviceFee); document.getElementById("rMileageLabel").textContent="Mileage ("+miles.toFixed(1)+" mi × $2.00)"; document.getElementById("rMileage").textContent=money(mileageCost); document.getElementById("rTotal").textContent=money(total); lastQuote="WE GO - Dedicated Same-Day Courier\n\nSmall & Medium Critical Loads\nType: "+selectedType+"\nPickup: "+pickup+"\nDestination: "+dropoff+"\nLoaded Miles: "+miles.toFixed(1)+"\nService Fee: "+money(serviceFee)+"\nMileage: "+money(mileageCost)+"\n\nTOTAL QUOTE: "+money(total)+"\n\nWhen it can’t wait... WE GO.\n662-554-7497\nchance_stanley@aol.com"; status.style.display="none"; result.style.display="block"; result.scrollIntoView({behavior:"smooth"});}catch(e){status.textContent=e.message||"Something went wrong."; status.style.display="block";}}
+async function copyQuote(){if(!lastQuote)return; await navigator.clipboard.writeText(lastQuote); alert("Quote copied.");}
+async function shareQuote(){if(!lastQuote)return; if(navigator.share){await navigator.share({text:lastQuote});}else{await copyQuote();}}
+</script>
+</body>
+</html>
