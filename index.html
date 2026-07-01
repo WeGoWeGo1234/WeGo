@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050505" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="WE GO" />
+  <title>WE GO Courier Quote</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero card glow">
+      <div class="mark">➤</div>
+      <div class="eyebrow">DEDICATED SAME-DAY COURIER</div>
+      <h1>WE <span>GO</span></h1>
+      <p>When it can’t wait... <strong>WE GO.</strong></p>
+    </section>
+
+    <section class="services">
+      <button class="service active" data-service="Parts">⚙<span>Parts</span></button>
+      <button class="service" data-service="Industrial">▰<span>Industrial</span></button>
+      <button class="service" data-service="Legal">⚖<span>Legal</span></button>
+      <button class="service" data-service="Supplies">□<span>Supplies</span></button>
+    </section>
+
+    <section class="form card">
+      <label>Pickup City</label>
+      <div class="input"><span>📍</span><input id="pickup" placeholder="Example: Tupelo" autocomplete="off" /></div>
+      <label>Destination City</label>
+      <div class="input"><span>📍</span><input id="dropoff" placeholder="Example: Memphis, TN" autocomplete="off" /></div>
+      <button id="quoteBtn" class="primary">GET QUOTE ›</button>
+      <div class="fine">$50 service fee + $2.00 per loaded mile</div>
+    </section>
+
+    <div id="status" class="status"></div>
+
+    <section id="result" class="quote card">
+      <div class="quoteTop">
+        <div>
+          <div class="eyebrow orange">FLAT RATE QUOTE</div>
+          <h2>WE GO</h2>
+        </div>
+        <div id="serviceBadge" class="badge">Parts</div>
+      </div>
+      <div class="route">
+        <div><span>Pickup</span><strong id="rPickup"></strong></div>
+        <div><span>Destination</span><strong id="rDropoff"></strong></div>
+        <div><span>Loaded Miles</span><strong id="rMiles"></strong></div>
+      </div>
+      <div class="break"></div>
+      <div class="line"><span>Service Fee</span><strong id="rFee"></strong></div>
+      <div class="line"><span id="rMileageLabel">Mileage</span><strong id="rMileage"></strong></div>
+      <div class="total"><span>TOTAL</span><strong id="rTotal"></strong></div>
+      <div class="actions">
+        <button id="copyBtn" class="secondary">📋 Copy</button>
+        <button id="shareBtn" class="secondary">↗ Share</button>
+        <button id="callBtn" class="primary small">☎ Call</button>
+      </div>
+    </section>
+
+    <footer>
+      <div><span>☎</span> 662-554-7497</div>
+      <div><span>✉</span> chance_stanley@aol.com</div>
+      <p>Business-critical deliveries</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
